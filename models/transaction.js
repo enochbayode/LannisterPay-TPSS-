@@ -17,7 +17,14 @@ const TransactionSchema = new Schema({
     CustomerEmail : {
         type: String,
         required: true
-    }
+    },
+    SlitInfo: [
+        {
+            SplitType: { type: String, required: true },
+            SplitValue: { type: Number, required: true },
+            SplitEntityId: { type: String, unique: true, required: true },
+        }
+    ]
 
 });
 

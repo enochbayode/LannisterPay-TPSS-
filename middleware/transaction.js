@@ -7,6 +7,7 @@ const validation = joi.object({
     amount: joi.number().required(),
     currency: joi.string().required(),
     email: joi.string().email().trim(true).required(),
+    // SplitInfo: array().unique(SplitEntityId).required()
 });
 
 const transactionValidation = async (req, res, next) => {
